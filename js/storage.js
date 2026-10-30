@@ -1,15 +1,15 @@
-let produit = [];
+export let products = [];
 
-export function fetchDate(){
-
-    fetch('./data/data.json')
-    .then(response => response.json())
-    .then(data =>   produit.push(data))
-
-    .catch(error => {
-        console.error("error while lodaing data :",error);
+export default function exportdata() {
+  return fetch('./data/data.json')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      products = data;      
+      return products;
+    })
+    .catch(function (error) {
+      console.log("erreur de serveur :", error);
     });
 }
-
-
-console.log(produit);
