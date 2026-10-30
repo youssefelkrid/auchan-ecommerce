@@ -1,0 +1,23 @@
+[
+  { "id": 1,  "nom": "Pommes Gala Bio", "prix": 3.49, "image": "/auchan-ecommerce/img/pomme.jpg",           "categorie": "Maison" },
+  { "id": 2,  "nom": "BARILA",          "prix": 5,    "image": "/auchan-ecommerce/img/BARILA.webp",         "categorie": "Maison" },
+  { "id": 3,  "nom": "BALLANTINES",     "prix": 20,   "image": "/auchan-ecommerce/img/BALLANTINES.webp",    "categorie": "Boissons" },
+  { "id": 4,  "nom": "1664",            "prix": 10,   "image": "/auchan-ecommerce/img/1664.webp",           "categorie": "Boissons" },
+  { "id": 5,  "nom": "COCA-COLA",       "prix": 2.5,  "image": "/auchan-ecommerce/img/COCA-COLA.webp",      "categorie": "Boissons" },
+  { "id": 6,  "nom": "VOLNER",          "prix": 18,   "image": "/auchan-ecommerce/img/CHARLES VOLNER.webp", "categorie": "Boissons" },
+  { "id": 7,  "nom": "LACTEL",          "prix": 7,    "image": "/auchan-ecommerce/img/LACTEL.webp",         "categorie": "Produits Laitiers" },
+  { "id": 8,  "nom": "PAMPERS",         "prix": 10,   "image": "/auchan-ecommerce/img/PAMPERS.webp",        "categorie": "Maison" },
+  { "id": 9,  "nom": "LUSTUCRU",        "prix": 13,   "image": "/auchan-ecommerce/img/LUSTUCRU.webp",       "categorie": "Maison" },
+  { "id": 10, "nom": "FLEURS",          "prix": 17,   "image": "/auchan-ecommerce/img/FLEURS.webp",         "categorie": "Maison" },
+  { "id": 11, "nom": "LIPTONASIR",      "prix": 4.5,  "image": "/auchan-ecommerce/img/LIPTONASIR.webp",     "categorie": "Boissons" },
+  { "id": 12, "nom": "VOTKA",           "prix": 20,   "image": "/auchan-ecommerce/img/BALLANTINES.webp",    "categorie": "Boissons" },
+  { "id": 13, "nom": "BANANE",          "prix": 12,   "image": "/auchan-ecommerce/img/BANANE.webp",         "categorie": "Maison" },
+  { "id": 14, "nom": "AVOCA",           "prix": 9,    "image": "/auchan-ecommerce/img/AVOCA.webp",          "categorie": "Maison" },
+  { "id": 15, "nom": "PAPAY",           "prix": 16,   "image": "/auchan-ecommerce/img/PAPAY.webp",          "categorie": "Maison" },
+  { "id": 16, "nom": "EL3INAB",         "prix": 2.5,  "image": "/auchan-ecommerce/img/EL3INAB.webp",        "categorie": "Boissons" },
+  { "id": 17, "nom": "NUTELLA",         "prix": 14,   "image": "/auchan-ecommerce/img/NUTELLA.webp",        "categorie": "Maison" },
+  { "id": 18, "nom": "PAMPERS",         "prix": 10,   "image": "/auchan-ecommerce/img/PAMPERS.webp",        "categorie": "Maison" },
+  { "id": 19, "nom": "ORONGE",          "prix": 12,   "image": "/auchan-ecommerce/img/ORONGE.webp",         "categorie": "Boissons" },
+  { "id": 20, "nom": "X-TRA",           "prix": 12,   "image": "/auchan-ecommerce/img/X-TRA.webp",          "categorie": "Maison" },
+  { "id": 21, "nom": "HALLOWEEN",       "prix": 14,   "image": "/auchan-ecommerce/img/HALLOWEEN.webp",      "categorie": "Maison" }
+]
