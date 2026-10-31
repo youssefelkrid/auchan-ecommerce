@@ -1,5 +1,5 @@
  [
-  { "id": 1,  "nom": "Pommes Gala Bio", "prix": 3.49, "image": "/auchan-ecommerce/img/pomme.jpg",           "categorie": "Maison" },
+  { "id": 1,  "nom": "Pommes Gala Bio", "prix": 3.49, "image": "auchan-ecommerce/img/pomme.jpg",           "categorie": "Maison" },
   { "id": 2,  "nom": "BARILA",          "prix": 5,    "image": "/auchan-ecommerce/img/BARILA.webp",         "categorie": "Maison" },
   { "id": 3,  "nom": "BALLANTINES",     "prix": 20,   "image": "/auchan-ecommerce/img/BALLANTINES.webp",    "categorie": "Boissons" },
   { "id": 4,  "nom": "1664",            "prix": 10,   "image": "/auchan-ecommerce/img/1664.webp",           "categorie": "Boissons" },

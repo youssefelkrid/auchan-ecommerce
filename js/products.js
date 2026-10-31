@@ -1,47 +1,46 @@
-const div = document.getElementById("produits");
+import cartProduit from './ui.js';
 
-export default function cartProduit(data) {
 
-    div.innerHTML = "";
+const divPagination = document.getElementById("pagination");
+const produitsparpage = 6 ;
+let pageActuelle = 1 ;
+let liste = [] ;   //list des produits 
 
-    data.forEach(element => {
+export default function pagination(products) {
+    liste = products ;
+    pageActuelle = 1 ;
+    afficherPage();
+}
 
-        const article = document.createElement("article");
 
-        article.dataset.id = element.id;
+function afficherPage(){
 
-        article.classList.add(
-            "bg-white",
-            "rounded-xl",
-            "shadow-sm",
-            "border",
-            "overflow-hidden",
-            "flex",
-            "flex-col",
-            "w-80"
-        );
+     const nombrepage = Math.ceil(liste.length / produitsparpage);
+     const debut = (pageActuelle -1) * produitsparpage ;
+     const fin = debut + produitsparpage ;
+     const produitsDeLapage = liste.slice(debut,fin);
 
-        article.innerHTML = `
-            <img src="${element.image}"
-                 alt="${element.nom}"
-                 class="w-full aspect-square object-cover">
+     cartProduit(produitsDeLapage);
+     afficherBoutons(nombrepage);
 
-            <div class="p-4 flex flex-col gap-2 flex-1">
+}
 
-                <h3 class="font-medium">${element.nom}</h3>
+function afficherBoutons(nombrepage) {
+    divPagination.innerHTML = "";
+    for(let i= 1;i <= nombrepage ; i++) {
+        const bouton = document.createElement("button");
+        bouton.textContent = i ;
+        bouton.classList.add("px-3","py-1","border" ,"rounded");
+        if(i === pageActuelle){
+             bouton.classList.add("bg-red-600", "text-white");
+        }
 
-                <div class="flex items-end justify-between mt-auto pt-2">
-                    <div>
-                        <p class="text-xs text-gray-500">Prix TTC</p>
-                        <p class="text-xl font-bold">
-                            ${element.prix} <span class="text-sm">€</span>
-                        </p>
-                    </div>
-                </div>
 
-            </div>
-        `;
-
-        div.append(article);
-    });
+            bouton.addEventListener("click",function(){
+                pageActuelle = i ;
+                afficherPage();
+            });
+            divPagination.append(bouton);
+        
+    }
 }
