@@ -1,8 +1,14 @@
-import exportdata, { products } from './storage.js';
-import cartProduit from './products.js';
+import exportdata, { products } from './api.js';
+import pagination from './products.js';
+
+
+
 
 exportdata().then(function () {
-  console.log(products);      
-  cartProduit(products);     
+    
+  console.log(products);
+  pagination(products);
+
+    
 });
 
