@@ -9,7 +9,7 @@ import './dragDrop.js';
 
 exportdata().then(function () {
     
-  // console.log(products);
+   console.log(products);
   pagination(products);
 
     localStorage.setItem("products",JSON.stringify(products));
