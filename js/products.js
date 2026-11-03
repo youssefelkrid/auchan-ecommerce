@@ -1,6 +1,8 @@
 import cartProduit from './ui.js';
+import exportdata, { products } from './api.js';
 
-
+const catalogue = document.querySelector("#category-filters");
+const filters = document.querySelector("#category-search");
 const divPagination = document.getElementById("pagination");
 const produitsparpage = 6 ;
 let pageActuelle = 1 ;
@@ -44,3 +46,21 @@ function afficherBoutons(nombrepage) {
         
     }
 }
+
+exportdata().then(function () {
+
+    filters.addEventListener( "input", function(e){
+        const pr = e.target.value
+         
+      
+       const filtered = products.filter((produit)=>
+           produit.nom.toUpperCase().includes(pr.toUpperCase())
+       );
+      
+     cartProduit(filtered);
+
+    });
+     
+ 
+});
+
