@@ -9,7 +9,8 @@ export default function cartProduit(data) {
         const article = document.createElement("article");
 
         article.dataset.id = element.id;
-
+        article.dataset.id = element.id;
+        article.draggable = true;
         article.classList.add(
             "bg-white",
             "rounded-xl",

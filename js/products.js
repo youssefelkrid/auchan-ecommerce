@@ -1,6 +1,9 @@
 import cartProduit from './ui.js';
+import exportdata , { products } from './api.js';
 
-
+const dataproduict = localStorage.getItem("products");
+const catalogue = document.querySelector("#category-filters");
+const filters = document.querySelector("#category-search");
 const divPagination = document.getElementById("pagination");
 const produitsparpage = 6 ;
 let pageActuelle = 1 ;
@@ -44,3 +47,34 @@ function afficherBoutons(nombrepage) {
         
     }
 }
+
+
+
+    filters.addEventListener( "input", function(e){
+        const pr = e.target.value
+         
+      
+       const filtered = products.filter((produit)=>
+           produit.nom.toUpperCase().includes(pr.toUpperCase())
+       );
+      
+     cartProduit(filtered);
+     
+
+    });
+     
+ 
+
+
+    catalogue.addEventListener("click" ,function(e){
+    const cata = e.target.dataset.category;
+
+        const catalogus = products.filter((catalog) =>{
+             return catalog.categorie.toUpperCase().includes(cata.toUpperCase());
+        });
+              cartProduit( catalogus);
+              
+    });
+
+
+
