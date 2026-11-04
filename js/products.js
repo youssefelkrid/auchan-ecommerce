@@ -70,6 +70,7 @@ function afficherBoutons(nombrepage) {
     const cata = e.target.dataset.category;
 
         const catalogus = products.filter((catalog) =>{
+            
              return catalog.categorie.toUpperCase().includes(cata.toUpperCase());
         });
               cartProduit( catalogus);
