@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="flex rounded-xl">
+        <aside class="hidden md:flex md:flex-col flex-[2] bg-white border-r p-4">
+            <a href="index.html" class="flex items-center gap-2 mb-8">
+
+
+                <div class="flex">
+                    <img class="w-7" src="/auchan-ecommerce/img/markit.png" alt="">
+                    <span class="text-xl font-bold">Auchan Web</span>
+                </div>
+            </a>
+
+            <nav class="flex flex-col gap-1">
+                <div class="flex ">
+                    <a class="flex items-center gap-3 p-2 rounded-lg bg-red-50 text-red-600 font-medium"
+                        href="index.html">
+                        Catalogue
+                    </a>
+                    <img class="w-7" src="img/brochure.png" alt="">
+                </div>
+                <div class="flex">
+                    <a class="flex items-center gap-3 p-2 rounded-lg text-gray-600 hover:bg-gray-100"
+                        href="administration.html">
+                        Administration
+                    </a>
+                    <img class="w-7" src="img/administration.png" alt="">
+                </div>
+            </nav>
+        </aside>
+    </section>
+
+    <div id="popup" class="flex justify-end bg-red-600 text-white p-2 w-fit rounded">
+        <button >+AJOUTER</button>
+    </div>
+
+    <div id="form" class="  flex justify-center items-center h-screen bg-gray-100">
+  <form action="" class="bg-white p-6 w-96 rounded shadow">
+
+    <h1 class="text-2xl font-bold text-center mb-4">ADD NEW PRODUCT</h1>
+
+    <div class="mb-3">
+      <label for="id" class="block">id</label>
+      <input id="id" type="text" placeholder="id" class="border w-full p-2">
+    </div>
+
+    <div class="mb-3">
+      <label for="nom" class="block">nom</label>
+      <input id="nom" type="text" placeholder="nom" class="border w-full p-2">
+    </div>
+
+    <div class="mb-3">
+      <label for="prix" class="block">prix</label>
+      <input id="prix" type="text" placeholder="prix" class="border w-full p-2">
+    </div>
+
+    <div class="mb-3">
+      <label for="img" class="block">img</label>
+      <input id="img" type="text" placeholder="img" class="border w-full p-2">
+    </div>
+
+    <div class="mb-3">
+      <label for="categorie" class="block">categorie</label>
+      <input id="categorie" type="text" placeholder="categorie" class="border w-full p-2">
+    </div>
+
+    <div class="flex gap-2">
+      <button type="submit" class="bg-red-600 text-white p-2 w-full rounded">AJOUTER</button>
+      <button type="button" class="bg-gray-300 p-2 w-full rounded">ANNULLER</button>
+    </div>
+
+  </form>
+</div>
+
+    
+
+
+</body>
+
+</html>

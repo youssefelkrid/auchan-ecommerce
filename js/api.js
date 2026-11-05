@@ -7,7 +7,8 @@ export default function exportdata() {
       return response.json();
     })
     .then(function (data) {
-      products = data;      
+      products = data;
+         
       return products;
      
     })

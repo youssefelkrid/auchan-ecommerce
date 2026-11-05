@@ -5,6 +5,7 @@ const popupPanier = document.getElementById("popupPanier");
 const fondPopup = document.getElementById("fondPopup");
 const fermerPopup = document.getElementById("fermerPopup");
 
+
 function ouvrirPopup() {
        afficherPanier();
     popupPanier.classList.remove("hidden");
@@ -76,5 +77,7 @@ function afficherPanier() {
 
     totalPanier.textContent = total.toFixed(2);
 }
+
+
 
     
