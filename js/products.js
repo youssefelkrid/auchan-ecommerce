@@ -60,6 +60,7 @@ function afficherBoutons(nombrepage) {
       
      cartProduit(filtered);
      
+     
 
     });
      
