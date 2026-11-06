@@ -17,3 +17,7 @@ export default function exportdata() {
     });
      
 }
+
+export function getRandomUserJSON() {
+    return fetch("https://randomuser.me/api/").then(response => response.json());
+}
