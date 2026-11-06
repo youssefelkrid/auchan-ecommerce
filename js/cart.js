@@ -18,10 +18,10 @@ function fermerLePopup() {
 }
 
 
+if (btnPanier){btnPanier.addEventListener("click", ouvrirPopup);}
+if(fermerPopup){fermerPopup.addEventListener("click", fermerLePopup);}
+if(fondPopup){fondPopup.addEventListener("click", fermerLePopup);}
 
-btnPanier.addEventListener("click", ouvrirPopup);
-fermerPopup.addEventListener("click", fermerLePopup);
-fondPopup.addEventListener("click", fermerLePopup);
 export let panier = [];
 
 

@@ -1,7 +1,7 @@
 const div = document.getElementById("produits");
 
 export default function cartProduit(data) {
-
+ if(div){
     div.innerHTML = "";
 
     data.forEach(element => {
@@ -21,6 +21,7 @@ export default function cartProduit(data) {
             "flex-col",
             "w-80"
         );
+    
 
         article.innerHTML = `
             <img src="${element.image}"
@@ -45,4 +46,5 @@ export default function cartProduit(data) {
 
         div.append(article);
     });
+}
 }
