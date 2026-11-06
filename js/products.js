@@ -29,6 +29,7 @@ function afficherPage(){
 }
 
 function afficherBoutons(nombrepage) {
+    if(divPagination){
     divPagination.innerHTML = "";
     for(let i= 1;i <= nombrepage ; i++) {
         const bouton = document.createElement("button");
@@ -47,37 +48,41 @@ function afficherBoutons(nombrepage) {
         
     }
 }
+}
 
 
+    if (filters) {
 
-    filters.addEventListener( "input", function(e){
-        const pr = e.target.value
+        filters.addEventListener( "input", function(e){
+            const pr = e.target.value
+             
+          
+           const filtered = products.filter((produit)=>
+               produit.nom.toUpperCase().includes(pr.toUpperCase())
+           );
+          
+         cartProduit(filtered);
          
-      
-       const filtered = products.filter((produit)=>
-           produit.nom.toUpperCase().includes(pr.toUpperCase())
-       );
-      
-     cartProduit(filtered);
-     
-     
+         
+    
+        });
 
-    });
+    }
      
  
 
+    if (catalogue) {
+        catalogue.addEventListener("click" ,function(e){
+        const cata = e.target.dataset.category;
 
-    catalogue.addEventListener("click" ,function(e){
-    const cata = e.target.dataset.category;
+            const catalogus = products.filter((catalog) =>{
 
-        const catalogus = products.filter((catalog) =>{
-
-            
-             return catalog.categorie.toUpperCase().includes(cata.toUpperCase());
+                
+                return catalog.categorie.toUpperCase().includes(cata.toUpperCase());
+            });
+                cartProduit( catalogus);
+                
         });
-              cartProduit( catalogus);
-              
-    });
-
+    }
 
 
