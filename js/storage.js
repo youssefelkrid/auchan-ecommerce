@@ -72,7 +72,7 @@ bouton_fetch.addEventListener("click",function(e){
        
         localStorage.setItem("products", JSON.stringify(produits));
 
-        forms.reset();
+        forms.value ='';
         formContainer.classList.add("hidden");
         formContainer.classList.remove("flex");
 

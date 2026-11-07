@@ -6,6 +6,41 @@ const catalogue = document.querySelector("#category-filters");
 const filters = document.querySelector("#category-search");
 const divPagination = document.getElementById("pagination");
 const produitsparpage = 6 ;
+const btn_grid = document.getElementById("btn-grid");
+const btn_list = document.getElementById("btn-list");
+const conteneur = document.getElementById("produits");
+if(btn_grid){
+btn_grid.addEventListener("click",function(){
+    conteneur.classList.remove("flex-col");
+    conteneur.classList.add("flex-row");
+    conteneur.querySelectorAll("article").forEach(function(article){
+        article.classList.remove("w-full");
+        article.classList.add("w-80");
+
+    });
+    
+});
+}
+if(btn_list){
+btn_list.addEventListener("click",function(){
+      conteneur.classList.remove("flex-row");
+      conteneur.classList.add("flex-col");
+      conteneur.querySelectorAll("article").forEach(function(article){
+       article.classList.remove("w-80","flex-col");
+       article.classList.add("w-full","flex-row","items-center");
+       const img = article.querySelector("img");
+       img.classList.remove("w-full","aspect-square");
+       img.classList.add("w-24","h-24");
+
+
+      });
+    
+});
+}
+
+
+
+
 let pageActuelle = 1 ;
 let liste = [] ;   //list des produits 
 
