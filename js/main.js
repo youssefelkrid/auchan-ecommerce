@@ -7,12 +7,18 @@ import './storage.js'
 
 
 
-
 exportdata().then(function () {
-    
-   console.log(products);
-  pagination(products);
 
-    localStorage.setItem("products",JSON.stringify(products));
+    const saved = localStorage.getItem("products");
+
+    if (saved) {
+        
+        products.splice(0, products.length, ...JSON.parse(saved));
+    } else {
+       
+        localStorage.setItem("products", JSON.stringify(products));
+    }
+
+    console.log(products);
+    pagination(products);
 });
-

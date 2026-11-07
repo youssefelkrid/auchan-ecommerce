@@ -44,5 +44,42 @@ bouton_fetch.addEventListener("click",function(e){
  }
 
 
+ if (forms) {
+    forms.addEventListener("submit", function (e) {
+        e.preventDefault(); 
+
+        
+        const nom = document.getElementById("nom").value.trim();
+        const prix = parseFloat(document.getElementById("prix").value);
+        const image = document.getElementById("img").value.trim();
+        const categorie = document.getElementById("categorie").value.trim();
+
+        // التحقق
+        if (!nom || isNaN(prix) || !image || !categorie) {
+            alert("ROMPLIRE TOUT LES INPUTS ");
+            return;
+        }
+
+        const produits = JSON.parse(localStorage.getItem("products")) || [];
+
+       
+        const newId = produits.length
+            ? Math.max(...produits.map(p => p.id)) + 1
+            : 1;
+
+        produits.push({ id: newId, nom, prix, image, categorie });
+
+       
+        localStorage.setItem("products", JSON.stringify(produits));
+
+        forms.reset();
+        formContainer.classList.add("hidden");
+        formContainer.classList.remove("flex");
+
+        alert("SUCCEIE");
+    });
+}
+
+
 
  
