@@ -1,6 +1,6 @@
 const div = document.getElementById("produits");
 
-export default function cartProduit(data) {
+export default function     (data) {
  if(div){
     div.innerHTML = "";
 
